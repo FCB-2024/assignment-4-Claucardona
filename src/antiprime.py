@@ -3,6 +3,8 @@
 ## COMMAND LINE SPECIFIED BELOW
 def main():
     x = int(input("Enter a positive integer number: "))
+## YOUR CODE SHOULD START HERE AT THE SAME
+## INDENTATION AS THIS COMMENT
     r = 1
     d = 1
     k = 1
@@ -31,10 +33,5 @@ def main():
 	## "anti-prime" or "not anti-prime"
     return "anti-prime"
 # DO NOT REMOVE THIS LINE BELOW
-if __name__ == "__main__":
-	## MODIFY THE LINE BELOW AND ADD BEFORE WHATEVER LINES ARE NECESSARY
-	## TO RUN THIS PROGRAM AS, FOR INSTANCE:
-	## $ python antiprime.py 6
-	## WHERE THE FIRST ARGUMENT IS A POSITIVE INTEGER NUMBER FOR WHICH
-	## YOU WANT TO FIGURE OUT WHETHER IS ANTI-PRIME OR NOT
-    print(main())
+if __name__ == "__main__" :
+    main()
