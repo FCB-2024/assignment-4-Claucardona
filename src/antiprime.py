@@ -1,8 +1,9 @@
 ## ADD WHATEVER ARGUMENTS ARE NECESSARY TO THE MAIN FUNCTION
 ## IN THE SAME ORDER AS THE ARGUMENTS ARE TAKEN FROM THE
 ## COMMAND LINE SPECIFIED BELOW
-def main():
-    x = int(input("Enter a positive integer number: "))
+import sys
+
+def es_antiprimo(x):
 ## YOUR CODE SHOULD START HERE AT THE SAME
 ## INDENTATION AS THIS COMMENT
     r = 1
@@ -22,16 +23,32 @@ def main():
                 i = i + 1
             k = k + 1
         if i >= n:
-            print("not anti-prime")
             return "not anti-prime"
         d = d + 1
-    print("anti-prime")
-    ## THE LAST LINES OF YOUR CODE SHOULD EITHER
-	## RETURN THE VALUE "anti-prime" or "not anti-prime"
-	## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
-	## OF CODE ALLOW THIS FUNCTION TO RETURN THE VALUE
-	## "anti-prime" or "not anti-prime"
     return "anti-prime"
-# DO NOT REMOVE THIS LINE BELOW
-if __name__ == "__main__" :
+
+def main():
+    # Verificar si hay un argumento proporcionado en la línea de comandos
+    if len(sys.argv) != 2:
+        print("Uso: python programa.py <numero>")
+        return
+
+    try:
+        x = int(sys.argv[1])
+        if x <= 0:
+            print("Por favor, ingrese un número entero positivo.")
+            return
+    except ValueError:
+        print("Por favor, ingrese un número entero válido.")
+        return
+## THE LAST LINES OF YOUR CODE SHOULD EITHER
+    ## PRINT THE SENTENCE "friends" or "not friends"
+    ## REPLACE THE FOLLOWING LINE BY WHATEVER LINES
+    ## OF CODE END UP WRITING "friends" or "not friends"
+    ##print("not friends")
+## DO NOT REMOVE THESE LINES
+    resultado = es_antiprimo(x)
+    print(resultado)
+
+if __name__ == "__main__":
     main()
